@@ -1,0 +1,35 @@
+<section data-ng-controller="ArticlesController" data-ng-init="findOne()">
+	<div class="col-lg-offset-1">
+		<div class="form-horizontal">
+			<div class="form-group">
+				<div class="col-lg-3">
+					<h1 data-ng-bind="article.title"></h1>
+					<hr>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="col-lg-3">
+					<div data-ng-show="authentication.user._id == article.creator._id">
+						<a href="/#!/articles/{{article._id}}/edit">edit</a>
+						<a href="#" data-ng-click="delete();">delete</a>
+					</div>
+					<small>
+						<em>Posted on</em>
+						<em data-ng-bind="article.created | date:'mediumDate'"></em>
+						<em>by</em>
+						<em data-ng-bind="article.creator.fullName"></em>
+					</small>
+					<br>
+					</div>
+				</div>
+			<div class="form-group">
+				<div class="col-lg-3">
+					<hr>
+					<p data-ng-bind="article.content"></p>
+				</div>
+			</div>
+		</div>
+	</div> 
+</section>
+
