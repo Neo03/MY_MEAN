@@ -2,7 +2,7 @@
 'use strict';
 
 module.exports = {
-	db: 'mongodb://heroku_app35874489:387420489@$&%V@ds061751.mongolab.com:61751/heroku_app35874489',
+	db: 'mongodb://heroku_app35874489:my_mean123@ds061751.mongolab.com:61751/heroku_app35874489',
 	sessionSecret: 'developmentSessionSecret',
 	facebook: {
 		clientID: '1417415745227398',
